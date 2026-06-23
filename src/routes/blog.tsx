@@ -19,10 +19,10 @@ export const Route = createFileRoute("/blog")({
       },
       { property: "og:title", content: "Blog — Tafukt Energy" },
       { property: "og:description", content: "Actualités et conseils sur l'énergie solaire." },
-      { property: "og:url", content: "/blog" },
+      { property: "og:url", content: "https://tafukt-solar-shine.lovable.app/blog" },
       { property: "og:image", content: BLOG_POSTS[0].image },
     ],
-    links: [{ rel: "canonical", href: "/blog" }],
+    links: [{ rel: "canonical", href: "https://tafukt-solar-shine.lovable.app/blog" }],
   }),
   component: Blog,
 });

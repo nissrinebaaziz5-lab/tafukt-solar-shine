@@ -18,10 +18,10 @@ export const Route = createFileRoute("/produits")({
       },
       { property: "og:title", content: "Catalogue de produits — Tafukt Energy" },
       { property: "og:description", content: "Des équipements solaires haut de gamme et certifiés." },
-      { property: "og:url", content: "/produits" },
+      { property: "og:url", content: "https://tafukt-solar-shine.lovable.app/produits" },
       { property: "og:image", content: PRODUCTS[0].image },
     ],
-    links: [{ rel: "canonical", href: "/produits" }],
+    links: [{ rel: "canonical", href: "https://tafukt-solar-shine.lovable.app/produits" }],
   }),
   component: Products,
 });

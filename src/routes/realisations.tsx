@@ -19,10 +19,10 @@ export const Route = createFileRoute("/realisations")({
       },
       { property: "og:title", content: "Nos réalisations — Tafukt Energy" },
       { property: "og:description", content: "Une galerie de projets solaires partout au Maroc." },
-      { property: "og:url", content: "/realisations" },
+      { property: "og:url", content: "https://tafukt-solar-shine.lovable.app/realisations" },
       { property: "og:image", content: PROJECTS[0].image },
     ],
-    links: [{ rel: "canonical", href: "/realisations" }],
+    links: [{ rel: "canonical", href: "https://tafukt-solar-shine.lovable.app/realisations" }],
   }),
   component: Projects,
 });

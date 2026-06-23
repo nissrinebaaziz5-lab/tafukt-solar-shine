@@ -95,9 +95,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Tafukt Energy" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Tafukt Energy — Solutions d'énergie solaire au Maroc" },
-      { name: "description", content: "A premium corporate website for Tafukt Energy SARL, offering solar energy solutions and renewable energy projects." },
-      { property: "og:description", content: "A premium corporate website for Tafukt Energy SARL, offering solar energy solutions and renewable energy projects." },
-      { name: "twitter:description", content: "A premium corporate website for Tafukt Energy SARL, offering solar energy solutions and renewable energy projects." },
+      {
+        name: "twitter:description",
+        content:
+          "Solutions énergétiques innovantes et durables : photovoltaïque, maintenance, audit énergétique et bornes de recharge.",
+      },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ad5c0569-d17d-4c77-8ab1-6886abaf49b8/id-preview-19022851--47fce645-6a17-4dad-9044-6effaa652e11.lovable.app-1782177280864.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ad5c0569-d17d-4c77-8ab1-6886abaf49b8/id-preview-19022851--47fce645-6a17-4dad-9044-6effaa652e11.lovable.app-1782177280864.png" },
     ],

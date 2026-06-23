@@ -18,10 +18,10 @@ export const Route = createFileRoute("/services")({
       },
       { property: "og:title", content: "Nos services — Tafukt Energy" },
       { property: "og:description", content: "Une expertise solaire complète, de l'étude à la maintenance." },
-      { property: "og:url", content: "/services" },
+      { property: "og:url", content: "https://tafukt-solar-shine.lovable.app/services" },
       { property: "og:image", content: SERVICES[0].image },
     ],
-    links: [{ rel: "canonical", href: "/services" }],
+    links: [{ rel: "canonical", href: "https://tafukt-solar-shine.lovable.app/services" }],
   }),
   component: Services,
 });

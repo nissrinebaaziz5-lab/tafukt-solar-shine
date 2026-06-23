@@ -24,9 +24,9 @@ export const Route = createFileRoute("/contact")({
       },
       { property: "og:title", content: "Contact — Tafukt Energy" },
       { property: "og:description", content: "Parlons de votre projet d'énergie solaire." },
-      { property: "og:url", content: "/contact" },
+      { property: "og:url", content: "https://tafukt-solar-shine.lovable.app/contact" },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: "https://tafukt-solar-shine.lovable.app/contact" }],
   }),
   component: Contact,
 });

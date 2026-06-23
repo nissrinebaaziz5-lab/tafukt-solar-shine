@@ -18,10 +18,10 @@ export const Route = createFileRoute("/a-propos")({
       },
       { property: "og:title", content: "À propos — Tafukt Energy" },
       { property: "og:description", content: "Notre histoire, mission, vision et valeurs." },
-      { property: "og:url", content: "/a-propos" },
+      { property: "og:url", content: "https://tafukt-solar-shine.lovable.app/a-propos" },
       { property: "og:image", content: aboutTeam },
     ],
-    links: [{ rel: "canonical", href: "/a-propos" }],
+    links: [{ rel: "canonical", href: "https://tafukt-solar-shine.lovable.app/a-propos" }],
   }),
   component: About,
 });
