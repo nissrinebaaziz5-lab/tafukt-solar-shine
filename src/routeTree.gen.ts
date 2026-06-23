@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as RealisationsRouteImport } from './routes/realisations'
 import { Route as ProduitsRouteImport } from './routes/produits'
+import { Route as DevisRouteImport } from './routes/devis'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AProposRouteImport } from './routes/a-propos'
@@ -30,6 +31,11 @@ const RealisationsRoute = RealisationsRouteImport.update({
 const ProduitsRoute = ProduitsRouteImport.update({
   id: '/produits',
   path: '/produits',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DevisRoute = DevisRouteImport.update({
+  id: '/devis',
+  path: '/devis',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/a-propos': typeof AProposRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
+  '/devis': typeof DevisRoute
   '/produits': typeof ProduitsRoute
   '/realisations': typeof RealisationsRoute
   '/services': typeof ServicesRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/a-propos': typeof AProposRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
+  '/devis': typeof DevisRoute
   '/produits': typeof ProduitsRoute
   '/realisations': typeof RealisationsRoute
   '/services': typeof ServicesRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/a-propos': typeof AProposRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
+  '/devis': typeof DevisRoute
   '/produits': typeof ProduitsRoute
   '/realisations': typeof RealisationsRoute
   '/services': typeof ServicesRoute
@@ -88,6 +97,7 @@ export interface FileRouteTypes {
     | '/a-propos'
     | '/blog'
     | '/contact'
+    | '/devis'
     | '/produits'
     | '/realisations'
     | '/services'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/a-propos'
     | '/blog'
     | '/contact'
+    | '/devis'
     | '/produits'
     | '/realisations'
     | '/services'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/a-propos'
     | '/blog'
     | '/contact'
+    | '/devis'
     | '/produits'
     | '/realisations'
     | '/services'
@@ -116,6 +128,7 @@ export interface RootRouteChildren {
   AProposRoute: typeof AProposRoute
   BlogRoute: typeof BlogRoute
   ContactRoute: typeof ContactRoute
+  DevisRoute: typeof DevisRoute
   ProduitsRoute: typeof ProduitsRoute
   RealisationsRoute: typeof RealisationsRoute
   ServicesRoute: typeof ServicesRoute
@@ -142,6 +155,13 @@ declare module '@tanstack/react-router' {
       path: '/produits'
       fullPath: '/produits'
       preLoaderRoute: typeof ProduitsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/devis': {
+      id: '/devis'
+      path: '/devis'
+      fullPath: '/devis'
+      preLoaderRoute: typeof DevisRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -180,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   AProposRoute: AProposRoute,
   BlogRoute: BlogRoute,
   ContactRoute: ContactRoute,
+  DevisRoute: DevisRoute,
   ProduitsRoute: ProduitsRoute,
   RealisationsRoute: RealisationsRoute,
   ServicesRoute: ServicesRoute,
