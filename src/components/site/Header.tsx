@@ -4,7 +4,7 @@ import { Menu, X, Phone } from "lucide-react";
 import { NAV_LINKS, COMPANY } from "@/data/site";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-horizontal.png";
 
 export function Header() {
   const [open, setOpen] = useState(false);
