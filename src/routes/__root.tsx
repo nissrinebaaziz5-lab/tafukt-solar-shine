@@ -98,8 +98,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "A premium corporate website for Tafukt Energy SARL, offering solar energy solutions and renewable energy projects." },
       { property: "og:description", content: "A premium corporate website for Tafukt Energy SARL, offering solar energy solutions and renewable energy projects." },
       { name: "twitter:description", content: "A premium corporate website for Tafukt Energy SARL, offering solar energy solutions and renewable energy projects." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a569c8f6-4b08-40b9-a744-83248e1b254e/id-preview-c270f382--47fce645-6a17-4dad-9044-6effaa652e11.lovable.app-1782177184441.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a569c8f6-4b08-40b9-a744-83248e1b254e/id-preview-c270f382--47fce645-6a17-4dad-9044-6effaa652e11.lovable.app-1782177184441.png" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ad5c0569-d17d-4c77-8ab1-6886abaf49b8/id-preview-19022851--47fce645-6a17-4dad-9044-6effaa652e11.lovable.app-1782177280864.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ad5c0569-d17d-4c77-8ab1-6886abaf49b8/id-preview-19022851--47fce645-6a17-4dad-9044-6effaa652e11.lovable.app-1782177280864.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
