@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { NAV_LINKS, SERVICES, COMPANY } from "@/data/site";
 import { SocialLinks } from "./SocialLinks";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-circle.png";
 
 export function Footer() {
   return (
