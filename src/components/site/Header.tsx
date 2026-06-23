@@ -4,7 +4,7 @@ import { Menu, X, Phone } from "lucide-react";
 import { NAV_LINKS, COMPANY } from "@/data/site";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-horizontal.png";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -31,7 +31,7 @@ export function Header() {
     >
       <div className="container-px flex h-18 items-center justify-between py-3">
         <Link to="/" className="flex items-center gap-2" aria-label="Tafukt Energy — Accueil">
-          <img src={logo} alt="Tafukt Energy" className="h-10 w-auto sm:h-11" width={180} height={48} />
+          <img src={logo} alt="Tafukt Energy" className="h-11 w-auto sm:h-12" width={186} height={48} />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">

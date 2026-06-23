@@ -2,15 +2,15 @@ import { Link } from "@tanstack/react-router";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { NAV_LINKS, SERVICES, COMPANY } from "@/data/site";
 import { SocialLinks } from "./SocialLinks";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-circle.png";
 
 export function Footer() {
   return (
     <footer className="bg-navy text-white">
       <div className="container-px grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="rounded-xl bg-white/95 p-3 inline-block">
-            <img src={logo} alt="Tafukt Energy" className="h-10 w-auto" width={170} height={40} loading="lazy" />
+          <div className="inline-block rounded-full bg-white p-1 shadow-lg">
+            <img src={logo} alt="Tafukt Energy" className="h-20 w-20 rounded-full" width={80} height={80} loading="lazy" />
           </div>
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/70">
             Tafukt Energy SARL accompagne le Maroc vers un avenir durable grâce à des solutions
