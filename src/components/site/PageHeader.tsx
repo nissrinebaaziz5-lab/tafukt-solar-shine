@@ -11,7 +11,7 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, subtitle, current, children }: PageHeaderProps) {
   return (
-    <section className="relative overflow-hidden bg-[var(--gradient-navy)] pt-30 pb-16 text-white sm:pb-20">
+    <section className="relative overflow-hidden bg-gradient-navy pt-30 pb-16 text-white sm:pb-20">
       <div className="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full bg-solar/20 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 left-1/4 h-72 w-72 rounded-full bg-solar/10 blur-3xl" />
       <div className="container-px relative">

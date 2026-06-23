@@ -51,7 +51,7 @@ function Services() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-7">
-                  <div className="grid h-12 w-12 place-items-center rounded-xl bg-[var(--gradient-solar)] text-navy">
+                  <div className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-solar text-navy">
                     <s.icon size={24} />
                   </div>
                   <h2 className="mt-4 text-xl font-bold">{s.title}</h2>

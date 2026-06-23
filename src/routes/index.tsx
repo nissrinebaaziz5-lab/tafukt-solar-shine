@@ -52,7 +52,7 @@ function Index() {
           height={1080}
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-[var(--gradient-hero)]" />
+        <div className="absolute inset-0 bg-gradient-hero" />
         <div className="container-px relative w-full pt-28 pb-16">
           <div className="max-w-3xl text-white">
             <Reveal>
@@ -99,7 +99,7 @@ function Index() {
             {ADVANTAGES.map((a, i) => (
               <Reveal key={a.title} delay={i * 90}>
                 <div className="card-hover h-full rounded-2xl border border-border bg-card p-7 shadow-card">
-                  <div className="grid h-14 w-14 place-items-center rounded-xl bg-[var(--gradient-solar)] text-navy">
+                  <div className="grid h-14 w-14 place-items-center rounded-xl bg-gradient-solar text-navy">
                     <a.icon size={26} />
                   </div>
                   <h3 className="mt-5 text-lg font-semibold">{a.title}</h3>
@@ -185,7 +185,7 @@ function Index() {
                 "Rentabilité et économies maximisées",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3">
-                  <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[var(--gradient-solar)] text-navy">
+                  <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-gradient-solar text-navy">
                     <Check size={14} />
                   </span>
                   <span className="text-foreground/85">{item}</span>

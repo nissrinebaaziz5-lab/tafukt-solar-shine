@@ -17,7 +17,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         solar:
-          "bg-[var(--gradient-solar)] text-navy font-semibold shadow-[var(--shadow-solar)] hover:brightness-105 hover:-translate-y-0.5 transition-all",
+          "bg-gradient-solar text-navy font-semibold shadow-[var(--shadow-solar)] hover:brightness-105 hover:-translate-y-0.5 transition-all",
         hero: "bg-white/10 text-white border border-white/40 backdrop-blur-sm font-semibold hover:bg-white hover:text-navy transition-all",
         navy: "bg-navy text-white shadow hover:bg-navy-light",
         outlineNavy:

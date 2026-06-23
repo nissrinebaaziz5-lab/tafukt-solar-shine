@@ -84,7 +84,7 @@ function About() {
         <div className="container-px grid gap-6 md:grid-cols-2">
           <Reveal>
             <div className="card-hover h-full rounded-3xl bg-card p-9 shadow-card">
-              <div className="grid h-14 w-14 place-items-center rounded-2xl bg-[var(--gradient-solar)] text-navy">
+              <div className="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-solar text-navy">
                 <Target size={28} />
               </div>
               <h3 className="mt-6 text-2xl font-bold">Notre mission</h3>
@@ -121,7 +121,7 @@ function About() {
             {VALUES.map((v, i) => (
               <Reveal key={v.title} delay={i * 90}>
                 <div className="card-hover h-full rounded-2xl border border-border bg-card p-7 text-center shadow-card">
-                  <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-[var(--gradient-solar)] text-navy">
+                  <div className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-gradient-solar text-navy">
                     <v.icon size={26} />
                   </div>
                   <h3 className="mt-5 text-lg font-semibold">{v.title}</h3>
@@ -149,7 +149,7 @@ function About() {
             {TEAM.map((m, i) => (
               <Reveal key={m.name} delay={i * 80}>
                 <div className="card-hover rounded-2xl border border-border bg-card p-7 text-center shadow-card">
-                  <div className="mx-auto grid h-20 w-20 place-items-center rounded-full bg-[var(--gradient-navy)] text-2xl font-bold text-solar">
+                  <div className="mx-auto grid h-20 w-20 place-items-center rounded-full bg-gradient-navy text-2xl font-bold text-solar">
                     {m.name.split(" ").map((n) => n[0]).join("")}
                   </div>
                   <h3 className="mt-5 text-lg font-semibold">{m.name}</h3>

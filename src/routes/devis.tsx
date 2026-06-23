@@ -105,7 +105,7 @@ function Devis() {
               height={900}
               className="aspect-[4/3] w-full rounded-3xl object-cover shadow-lift"
             />
-            <div className="rounded-2xl bg-[var(--gradient-navy)] p-7 text-white">
+            <div className="rounded-2xl bg-gradient-navy p-7 text-white">
               <div className="flex items-center gap-3">
                 <span className="grid h-12 w-12 place-items-center rounded-xl bg-solar text-navy">
                   <Clock size={24} />

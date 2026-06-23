@@ -165,7 +165,7 @@ function ContactRow({
 }) {
   const content = (
     <div className="flex gap-4">
-      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-[var(--gradient-solar)] text-navy">
+      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-solar text-navy">
         <Icon size={22} />
       </span>
       <div>

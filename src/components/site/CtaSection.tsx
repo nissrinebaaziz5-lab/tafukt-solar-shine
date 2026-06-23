@@ -15,7 +15,7 @@ export function CtaSection() {
         width={1920}
         height={900}
       />
-      <div className="absolute inset-0 bg-[var(--gradient-navy)] opacity-90" />
+      <div className="absolute inset-0 bg-gradient-navy opacity-90" />
       <div className="container-px relative">
         <Reveal className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold leading-tight sm:text-5xl">
