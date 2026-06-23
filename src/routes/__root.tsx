@@ -85,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Tafukt Energy SARL : installation de panneaux photovoltaïques, maintenance solaire, audit énergétique et projets d'énergie renouvelable au Maroc.",
       },
       { name: "author", content: "Tafukt Energy SARL" },
-      { property: "og:title", content: "Tafukt Energy — Énergie solaire au Maroc" },
+      { property: "og:title", content: "Tafukt Energy — Solutions d'énergie solaire au Maroc" },
       {
         property: "og:description",
         content:
@@ -94,6 +94,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Tafukt Energy" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Tafukt Energy — Solutions d'énergie solaire au Maroc" },
+      { name: "description", content: "A premium corporate website for Tafukt Energy SARL, offering solar energy solutions and renewable energy projects." },
+      { property: "og:description", content: "A premium corporate website for Tafukt Energy SARL, offering solar energy solutions and renewable energy projects." },
+      { name: "twitter:description", content: "A premium corporate website for Tafukt Energy SARL, offering solar energy solutions and renewable energy projects." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a569c8f6-4b08-40b9-a744-83248e1b254e/id-preview-c270f382--47fce645-6a17-4dad-9044-6effaa652e11.lovable.app-1782177184441.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a569c8f6-4b08-40b9-a744-83248e1b254e/id-preview-c270f382--47fce645-6a17-4dad-9044-6effaa652e11.lovable.app-1782177184441.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
