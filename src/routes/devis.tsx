@@ -25,10 +25,10 @@ export const Route = createFileRoute("/devis")({
       },
       { property: "og:title", content: "Demander un devis — Tafukt Energy" },
       { property: "og:description", content: "Étude gratuite et devis personnalisé sous 24h." },
-      { property: "og:url", content: "/devis" },
+      { property: "og:url", content: "https://tafukt-solar-shine.lovable.app/devis" },
       { property: "og:image", content: quoteImage },
     ],
-    links: [{ rel: "canonical", href: "/devis" }],
+    links: [{ rel: "canonical", href: "https://tafukt-solar-shine.lovable.app/devis" }],
   }),
   component: Devis,
 });

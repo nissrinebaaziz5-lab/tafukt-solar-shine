@@ -24,10 +24,10 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Solutions énergétiques innovantes et respectueuses de l'environnement au Maroc.",
       },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://tafukt-solar-shine.lovable.app" },
       { property: "og:image", content: heroImage },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://tafukt-solar-shine.lovable.app" }],
   }),
   component: Index,
 });
