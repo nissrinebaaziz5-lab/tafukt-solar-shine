@@ -48,13 +48,16 @@ const EMPTY: FormData = { nom: "", prenom: "", telephone: "", email: "", sujet: 
 function Contact() {
   const [data, setData] = useState<FormData>(EMPTY);
   const [errors, setErrors] = useState<Errors>({});
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const update = (k: keyof FormData) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setData((d) => ({ ...d, [k]: e.target.value }));
     setErrors((er) => ({ ...er, [k]: undefined }));
+    setSubmitted(false);
   };
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const result = schema.safeParse(data);
     if (!result.success) {
@@ -67,6 +70,10 @@ function Contact() {
       toast.error("Veuillez corriger les champs en rouge.");
       return;
     }
+    setSubmitting(true);
+    await new Promise((r) => setTimeout(r, 1000));
+    setSubmitting(false);
+    setSubmitted(true);
     toast.success("Message envoyé ! Nous vous répondrons rapidement.");
     setData(EMPTY);
     setErrors({});
