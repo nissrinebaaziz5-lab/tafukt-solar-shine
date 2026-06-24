@@ -27,7 +27,10 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://tafukt-solar-shine.lovable.app" },
       { property: "og:image", content: heroImage },
     ],
-    links: [{ rel: "canonical", href: "https://tafukt-solar-shine.lovable.app" }],
+    links: [
+      { rel: "canonical", href: "https://tafukt-solar-shine.lovable.app" },
+      { rel: "preload", as: "image", href: heroImage, fetchPriority: "high" },
+    ],
   }),
   component: Index,
 });
