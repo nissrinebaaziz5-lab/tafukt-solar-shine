@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, Loader2, CheckCircle2 } from "lucide-react";
 import { toast } from "sonner";
 import { Layout } from "@/components/site/Layout";
 import { PageHeader } from "@/components/site/PageHeader";
@@ -48,13 +48,16 @@ const EMPTY: FormData = { nom: "", prenom: "", telephone: "", email: "", sujet: 
 function Contact() {
   const [data, setData] = useState<FormData>(EMPTY);
   const [errors, setErrors] = useState<Errors>({});
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const update = (k: keyof FormData) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setData((d) => ({ ...d, [k]: e.target.value }));
     setErrors((er) => ({ ...er, [k]: undefined }));
+    setSubmitted(false);
   };
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const result = schema.safeParse(data);
     if (!result.success) {
@@ -67,6 +70,10 @@ function Contact() {
       toast.error("Veuillez corriger les champs en rouge.");
       return;
     }
+    setSubmitting(true);
+    await new Promise((r) => setTimeout(r, 1000));
+    setSubmitting(false);
+    setSubmitted(true);
     toast.success("Message envoyé ! Nous vous répondrons rapidement.");
     setData(EMPTY);
     setErrors({});
@@ -141,9 +148,27 @@ function Contact() {
                   </Field>
                 </div>
               </div>
-              <Button type="submit" variant="solar" size="lg" className="mt-6 w-full">
-                Envoyer le message <Send size={17} />
+              <Button type="submit" variant="solar" size="lg" className="mt-6 w-full" disabled={submitting}>
+                {submitting ? (
+                  <>
+                    <Loader2 size={17} className="animate-spin" /> Envoi en cours…
+                  </>
+                ) : (
+                  <>
+                    Envoyer le message <Send size={17} />
+                  </>
+                )}
               </Button>
+              {submitted && (
+                <div
+                  role="status"
+                  aria-live="polite"
+                  className="mt-4 flex items-center gap-2 rounded-xl border border-solar/40 bg-solar/10 px-4 py-3 text-sm font-medium text-foreground"
+                >
+                  <CheckCircle2 size={18} className="shrink-0 text-solar" />
+                  Merci ! Votre message a bien été envoyé. Notre équipe vous répond rapidement.
+                </div>
+              )}
             </form>
           </Reveal>
         </div>
