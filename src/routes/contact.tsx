@@ -148,9 +148,27 @@ function Contact() {
                   </Field>
                 </div>
               </div>
-              <Button type="submit" variant="solar" size="lg" className="mt-6 w-full">
-                Envoyer le message <Send size={17} />
+              <Button type="submit" variant="solar" size="lg" className="mt-6 w-full" disabled={submitting}>
+                {submitting ? (
+                  <>
+                    <Loader2 size={17} className="animate-spin" /> Envoi en cours…
+                  </>
+                ) : (
+                  <>
+                    Envoyer le message <Send size={17} />
+                  </>
+                )}
               </Button>
+              {submitted && (
+                <div
+                  role="status"
+                  aria-live="polite"
+                  className="mt-4 flex items-center gap-2 rounded-xl border border-solar/40 bg-solar/10 px-4 py-3 text-sm font-medium text-foreground"
+                >
+                  <CheckCircle2 size={18} className="shrink-0 text-solar" />
+                  Merci ! Votre message a bien été envoyé. Notre équipe vous répond rapidement.
+                </div>
+              )}
             </form>
           </Reveal>
         </div>
